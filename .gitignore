@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+
+# Salidas de LS-DYNA y LS-PrePost
+d3plot*
+binout*
+glstat*
+matsum*
+messag*
+abstat*
+elout*
+nodout*
+rcforc*
+sleout*
+*.cfile
+*.msg
+
+# Modelos generados; se conserva únicamente caso_base/
+generados/
+resultados/
+resultados_procesados/
+
+# Archivos temporales
+tmp/
+*.tmp
+
