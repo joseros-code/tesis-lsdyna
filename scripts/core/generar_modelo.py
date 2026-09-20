@@ -33,7 +33,7 @@ def leer_args():
         "--base",
         dest="modelo_base",
         default="",
-        help="Modelo base de Carlos. Si se omite usa originales/MallaCelula_DD.k.",
+        help="Archivo del modelo base. Si se omite usa originales/MallaCelula_DD.k.",
     )
     p.add_argument(
         "--prefijo-salida",

@@ -37,7 +37,7 @@ def leer_args():
         type=int,
         nargs="+",
         default=[8, 10, 12, 14, 16, 18, 20, 22, 24],
-        help="Lista de densidades tipo Carlos.",
+        help="Lista de densidades de la malla celular.",
     )
     p.add_argument("--Rc", "--r", dest="Rc", type=float, default=0.005)
     p.add_argument("--eta", type=float, default=0.67)

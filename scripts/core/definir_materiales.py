@@ -1,7 +1,7 @@
 # ------------------------------------------------------------
 # Materiales de la celula para *MAT_SOFT_TISSUE.
 #
-# Unidades usadas por los modelos de Carlos:
+# Unidades consistentes del modelo base:
 #   longitud: mm
 #   masa: tonelada
 #   tiempo: s
@@ -35,7 +35,7 @@ def leer_mat(args):
     """
     preset = args.material_preset
 
-    if preset == "carlos":
+    if preset == "modelo_base":
         Ec_kPa = args.Ec_kPa if args.Ec_kPa is not None else 300.0
         relacion = args.relacion_En_Ec if args.relacion_En_Ec is not None else 1.0
 
@@ -86,9 +86,9 @@ def args_mat(parser):
     parser.add_argument(
         "--material-preset",
         "--mat",
-        choices=["carlos", "paper_tcell", "manual"],
+        choices=["modelo_base", "paper_tcell", "manual"],
         dest="material_preset",
-        default="carlos",
+        default="modelo_base",
         help="Preset de materialidad para citoplasma y nucleo.",
     )
     parser.add_argument(

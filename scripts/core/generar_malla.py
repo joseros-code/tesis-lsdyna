@@ -80,7 +80,7 @@ def lin(a, b, n):
 def divisiones_radiales():
     # d controla directamente las separaciones del cubo central.
     # El cascaron usa 2d capas radiales, lo que reproduce el conteo
-    # de elementos de la malla original de Carlos: 14*d^3.
+    # de elementos de la malla estructurada de referencia: 14*d^3.
     if d < 1:
         raise ValueError("La densidad debe ser mayor o igual a 1.")
 
