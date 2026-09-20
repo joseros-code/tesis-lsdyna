@@ -1,6 +1,6 @@
 # integrar_celula.py
 # ------------------------------------------------------------
-# Mete la celula nueva dentro del modelo de Carlos.
+# Integra la celula nueva dentro del modelo base.
 #
 # Que modifica:
 #   - elimina SOLO elementos solidos antiguos con PID=2
@@ -47,7 +47,7 @@ def leer_args():
         "--mod",
         dest="modelo",
         default="originales/MallaCelula_06.k",
-        help="Archivo .k base de Carlos.",
+        help="Archivo .k del modelo base.",
     )
     p.add_argument(
         "--celula",
@@ -540,8 +540,8 @@ if not insertados_elementos_nuevos:
     print("Advertencia: no se encontro cierre de *ELEMENT_SOLID; revisa el archivo.")
 
 
-# Insertar nodos nuevos justo antes del primer *PART, que en el modelo de
-# Carlos aparece despues del bloque *NODE. Asi no se toca ningun nodo antiguo.
+# Insertar nodos nuevos justo antes del primer *PART, ubicado despues del
+# bloque *NODE en el modelo base. Asi no se modifica ningun nodo existente.
 lineas_nodos_nuevos = ["$\n", "$ Nodos agregados para celula nucleo-citoplasma\n", "$\n"]
 
 for nid, coordenadas in nodos_nuevos:
